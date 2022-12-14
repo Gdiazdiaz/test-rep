@@ -1,5 +1,6 @@
 const string = require('./stringLength');
 const calculator = require('./calculator');
+const capitalize = require('./capitalLetter');
 const assert = require('assert');
 
 describe('string_length', function(){
@@ -56,5 +57,11 @@ describe('calculator', function(){
     })
     it('div 0 by 4', function(){
         assert(calculator.div(0,4)===0)
+    })
+})
+
+describe('capitalize', function(){
+    it('capitalizes f to F', function(){
+        assert(capitalize('cat')==='Cat')
     })
 })
